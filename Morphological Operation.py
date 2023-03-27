@@ -22,9 +22,5 @@ imgDilate = cv2.dilate(imgSobel,kernel,iterations=1)
 imgOpening = cv2.morphologyEx(imgSobel,cv2.MORPH_OPEN,kernel)
 imgClosing = cv2.morphologyEx(imgSobel,cv2.MORPH_CLOSE,kernel)
 
-#Reference https://learnopencv.com/filling-holes-in-an-image-using-opencv-python-c/
-imgFill = imageFill(imgSobel)
-
 cv2.imshow("Eroded image",imgErode)
 cv2.waitKey(0)
-
